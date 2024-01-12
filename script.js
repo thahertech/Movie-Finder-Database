@@ -1,5 +1,6 @@
 // API key for The Movie Database
-const apiKey = "04c35731a5ee918f014970082a0088b1";
+const apiKey = "04c35731a5ee918f014970082a0088b1"; 
+//API key added for example purposes above ! 
 
 // URLs for different API endpoints
 const URL =
@@ -115,4 +116,35 @@ const handleLoadMore = () => {
     getSpecificPage(++page);
 };
 
-// Function to de
+// Function to detect the end of the page and trigger loading more content
+const detectEndAndLoadMore = (e) => {
+    let el = document.documentElement;
+    if (
+        !inSearchPage &&
+        el.scrollTop + el.clientHeight == el.scrollHeight
+    ) {
+        console.log("BINGO!");
+        handleLoadMore();
+    }
+};
+
+// Event listener for the search form submission
+form.addEventListener("submit", async (e) => {
+    inSearchPage = true;
+    e.preventDefault();
+    const searchTerm = query.value;
+    searchTerm && fetchAndShowResults(searchURL + searchTerm);
+    query.value = "";
+});
+
+// Event listener for scrolling to detect the end of the page
+window.addEventListener("scroll", detectEndAndLoadMore);
+
+// Initialization function to fetch and display initial results
+function init() {
+    inSearchPage = false;
+    fetchAndShowResults(URL);
+}
+
+// Initial call to the initialization function
+init();
