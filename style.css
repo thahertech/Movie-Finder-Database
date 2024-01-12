@@ -1,0 +1,172 @@
+/* Reset styles for all elements */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Styling for anchor (link) elements */
+a {
+    color: rgb(38, 38, 41);
+    text-decoration: none;
+}
+
+/* Global styles for the body */
+body {
+    color: rgb(255, 255, 255);
+    font-family: "microsoft yahei", arial, -apple-system, BlinkMacSystemFont,
+      "segoe ui", roboto, oxygen, cantarell, "helvetica neue", ubuntu, sans-serif;
+    background: #f6dcbd;
+}
+
+/* Styles for SearchBtn class */
+.SearchBtn {
+    color: rgb(252, 252, 252);
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: inherit;
+}
+
+/* Styles for SearchBtn class on hover state */
+.SearchBtn:hover {
+    background: #06c3dd;
+    border-color: #06c3dd;
+}
+
+/* Styles for the search block container */
+.search-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 15px 0 30px 0;
+}
+
+/* Styles for the search form within the search block */
+.search-block #search-form {
+    display: flex;
+    max-width: 400px;
+}
+
+/* Styles for the input field within the search block */
+.search-block input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 0;
+    border: none;
+    background: rgba(77, 71, 71, 0.75);
+}
+
+/* Styles for the SearchBtn within the search block */
+.search-block .SearchBtn {
+    width: 120px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgb(211, 211, 211);
+}
+
+/* Styles for the SearchBtn within the search block on hover state */
+.search-block .SearchBtn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(69, 63, 63);
+}
+
+/* Styles for a special load button */
+.SearchBtn-load {
+    background-color: skyblue;
+    padding: 10px 25px;
+    border: none;
+    margin-top: 15px;
+}
+
+/* Styles for the row container */
+.row {
+    display: flex;
+    max-width: 1200px;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Styles for the main wrapper container */
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styles for the card container within the wrapper */
+.wrapper .card {
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    width: 285px;
+    height: 360px;
+    overflow: hidden;
+    transition: 0.5s ease all;
+}
+
+/* Styles for the card content within the card */
+.wrapper .card .card-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px 10px 7px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(51, 55, 69, 0),
+        rgba(16, 21, 40, 0.95)
+    );
+    transition: inherit;
+}
+
+/* Styles for the header section within the card content */
+.wrapper .card .card-content .card-cont-header {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styles for the description section within the card content */
+.wrapper .card .card-content .describe {
+    max-height: 0;
+    opacity: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: inherit;
+}
+
+/* Styles for the card on hover state */
+.wrapper .card:hover {
+    cursor: pointer;
+}
+
+/* Styles for the card content on hover state */
+.wrapper .card:hover .card-content {
+    background-image: linear-gradient(180deg, rgba(51, 55, 69, 0) 0, #101528 48%);
+}
+
+/* Styles for the SearchBtn within the card on hover state */
+.wrapper .card:hover .SearchBtn {
+    background: #06c3dd;
+    border-color: #06c3dd;
+}
+
+/* Styles for the description within the card on hover state */
+.wrapper .card:hover .describe {
+    max-height: 200px;
+    padding: 8px 0;
+    opacity: 1;
+}
